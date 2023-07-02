@@ -6,8 +6,6 @@ import {Input} from '../../shared/ui/components/input/input';
 import {yupResolver} from "@hookform/resolvers/yup"
 import {validationSchema, validationSchemaType} from "./schema";
 
-
-
 const Form = () => {
     const {
         register,

@@ -37,7 +37,6 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
                         }
                     </div>
                 }
-
                 {error && <span>{error}</span>}
             </div>
         );
