@@ -1,0 +1,43 @@
+.container{
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(39, 39, 39, 0.10);
+  background: var(--background-fff);
+  padding: 40px 88px 60px 88px;
+  text-align: center;
+  img{
+
+    width: 88px;
+    height: 88px;
+    margin-bottom: 32px;
+    display: inline-block;
+
+  }
+
+  p{
+    margin-bottom: 27px;
+
+  }
+
+  button{
+    border-radius: 5px;
+    background:  #1390E5;
+
+    color: #FFF;
+    text-align: center;
+    font-size: var(--fs-md);
+
+    font-style: normal;
+    font-weight: var(--fw-normal);
+    line-height: 24px;
+    padding: 14px 61px;
+  }
+}
+
+
+.inputMargin{
+  margin-bottom: 20px;
+}
+
+.inputMarginX2{
+  margin-bottom: 40px;
+}
