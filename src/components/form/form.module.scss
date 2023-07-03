@@ -2,15 +2,14 @@
   border-radius: var(--border-radius);
   border: 1px solid rgba(39, 39, 39, 0.10);
   background: var(--background-fff);
-  padding: 40px 88px 60px 88px;
   text-align: center;
-  img{
+  padding: 40px 88px 60px 88px;
 
+  img{
     width: 88px;
     height: 88px;
     margin-bottom: 32px;
     display: inline-block;
-
   }
 
   p{
@@ -41,3 +40,21 @@
 .inputMarginX2{
   margin-bottom: 40px;
 }
+
+
+
+@media (max-width: 500px) {
+  .container{
+    padding: 40px 30px 60px 30px;
+
+  }
+}
+
+
+@media (max-width: 320px) {
+  .container{
+    padding: 40px 10px 60px 10px;
+
+  }
+}
+

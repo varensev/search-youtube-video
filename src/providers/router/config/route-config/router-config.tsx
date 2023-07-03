@@ -1,9 +1,8 @@
-import {createBrowserRouter, } from 'react-router-dom';
+import {createBrowserRouter} from 'react-router-dom';
 import {APP_ROUTER} from "../app-routes.constants";
-
 import ErrorPage from "../../../../pages/error/error-page";
-import {Main} from "../../../../pages/main/index";
-import {Auth} from "../../../../pages/auth/index";
+import {Main} from "../../../../pages/main";
+import {Auth} from "../../../../pages/auth";
 
 
 export const router = createBrowserRouter([
@@ -24,21 +23,41 @@ export const router = createBrowserRouter([
     },
 ]);
 
+
+
 // TODO: in progress
-// import { Auth } from 'pages/auth/auth';  type RouteProps
-// import * as React from "react";
-//
+
 // export enum AppRoutes {
 //     AUTH = 'AUTH',
+//     MAIN = "MAIN"
 // }
 //
 // export const RoutePath: Record<AppRoutes, string> = {
 //     [AppRoutes.AUTH]: '/',
+//     [AppRoutes.MAIN]: "/main"
 // };
 //
 // export const routeConfig: Record<AppRoutes, RouteProps> = {
 //     [AppRoutes.AUTH]: {
 //         path: RoutePath[AppRoutes.AUTH],
 //         element: <Auth/>,
+//     },
+//     [AppRoutes.MAIN]:{
+//         path: RoutePath[AppRoutes.MAIN],
+//         element: <div>das</div>
 //     }
 // };
+//
+// const AppRouter = () => {
+//   return(
+//       <Routes>
+//           {Object.values(routeConfig).map(({element, path}) => (
+//               <Route
+//                   key={path}
+//                   path={path}
+//                   element={element}
+//               />
+//           ))}
+//       </Routes>
+//   )
+// }
