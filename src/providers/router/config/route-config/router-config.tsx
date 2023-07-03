@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
         ],
     },
     {
-        path: APP_ROUTER.AUTH,
+        path: APP_ROUTER.LOGIN,
         element: <Auth />
     },
 ]);
@@ -28,18 +28,18 @@ export const router = createBrowserRouter([
 // TODO: in progress
 
 // export enum AppRoutes {
-//     AUTH = 'AUTH',
+//     LOGIN = 'LOGIN',
 //     MAIN = "MAIN"
 // }
 //
 // export const RoutePath: Record<AppRoutes, string> = {
-//     [AppRoutes.AUTH]: '/',
+//     [AppRoutes.LOGIN]: '/',
 //     [AppRoutes.MAIN]: "/main"
 // };
 //
 // export const routeConfig: Record<AppRoutes, RouteProps> = {
-//     [AppRoutes.AUTH]: {
-//         path: RoutePath[AppRoutes.AUTH],
+//     [AppRoutes.LOGIN]: {
+//         path: RoutePath[AppRoutes.LOGIN],
 //         element: <Auth/>,
 //     },
 //     [AppRoutes.MAIN]:{

@@ -1,5 +1,5 @@
 export const APP_ROUTER = {
     ROOT: "/",
-    AUTH: "auth",
+    LOGIN: "login",
     children: "children"
 }
