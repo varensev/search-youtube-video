@@ -1,12 +1,15 @@
 import './styles/App.scss';
-import * as React from "react";
+import  React , {Suspense} from "react";
 import {AppRouter} from "./providers/router/ui/app-router";
+import Loader from "./widget/loader/loader";
 
 
 function App() {
     return (
         <div>
-            <AppRouter/>
+            <Suspense fallback={<Loader/>}>
+                <AppRouter/>
+            </Suspense>
         </div>
     );
 }

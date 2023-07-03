@@ -1,23 +1,10 @@
 import {createBrowserRouter, } from 'react-router-dom';
-import {Auth} from "../../../../pages/auth";
 import {APP_ROUTER} from "../app-routes.constants";
-import {Main} from "../../../../pages/main/ui/main";
-import ErrorPage from "../../../../pages/error/error-page";
 
-// export const router = createBrowserRouter([
-//     {
-//         path: APP_ROUTER.AUTH,
-//         element: <Auth/>,
-//         errorElement: <ErrorPage />,
-//         children: [
-//             {
-//                 path: APP_ROUTER.MAIN,
-//                 element: <Main/>,
-//             },
-//         ],
-//     },
-//
-// ]);
+import ErrorPage from "../../../../pages/error/error-page";
+import {Main} from "../../../../pages/main/index";
+import {Auth} from "../../../../pages/auth/index";
+
 
 export const router = createBrowserRouter([
     {
@@ -31,8 +18,10 @@ export const router = createBrowserRouter([
             },
         ],
     },
-    { path: APP_ROUTER.AUTH, element: <Auth /> },
-
+    {
+        path: APP_ROUTER.AUTH,
+        element: <Auth />
+    },
 ]);
 
 // TODO: in progress

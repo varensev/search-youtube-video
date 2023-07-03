@@ -1,13 +1,13 @@
 import React from 'react';
+import {useNavigate} from "react-router-dom";
+import {APP_ROUTER} from "../../../providers/router/config/app-routes.constants";
 
-interface IMainProps {
-
-}
-
-const Main: React.FC<IMainProps> = () => {
+const Main = () => {
+    const navigate = useNavigate()
     return (
         <div>
-            <p>ads</p>
+            <p>Main PAGE</p>
+            <button  onClick={() => navigate(APP_ROUTER.AUTH)}> кнопка</button>
         </div>
     );
 };
