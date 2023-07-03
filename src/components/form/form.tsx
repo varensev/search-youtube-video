@@ -5,6 +5,8 @@ import {useForm} from 'react-hook-form';
 import {Input} from '../../shared/ui/components/input/input';
 import {yupResolver} from "@hookform/resolvers/yup"
 import {validationSchema, validationSchemaType} from "./schema";
+import {useNavigate} from "react-router-dom";
+import {APP_ROUTER} from "../../providers/router/config/app-routes.constants";
 
 const Form = () => {
     const {
@@ -14,9 +16,11 @@ const Form = () => {
     } = useForm<validationSchemaType>({
         resolver: yupResolver(validationSchema),
     });
+    const navigate = useNavigate();
 
     const onSubmit = (data: validationSchemaType) => {
         console.log(data);
+        navigate(APP_ROUTER.ROOT)
     };
 
     return (
