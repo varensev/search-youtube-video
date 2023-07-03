@@ -1,5 +1,5 @@
 import React from 'react';
-import {Form} from "../../components/form/form";
+import {Form} from "../../../components/form/form";
 import styles from "./auth.module.scss"
 
 const Auth = () => {
