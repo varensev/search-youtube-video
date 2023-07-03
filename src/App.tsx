@@ -1,24 +1,11 @@
 import './styles/App.scss';
 import * as React from "react";
-import {
-    createBrowserRouter,
-    RouterProvider,
-} from "react-router-dom";
-import {Main} from "./pages/main/main";
-
-
-const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <Main/>,
-    },
-]);
+import {AppRouter} from "./providers/router/ui/app-router";
 
 function App () {
-
     return (
         <div>
-            <RouterProvider router={router} />
+            <AppRouter/>
         </div>
     );
 }

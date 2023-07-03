@@ -1,11 +1,8 @@
 import React from 'react';
 import {Form} from "../../components/form/form";
-import styles from "./main.module.scss"
-interface IMainProps {
+import styles from "./auth.module.scss"
 
-}
-
-const Main: React.FC<IMainProps> = () => {
+const Auth = () => {
     return (
         <div className={styles.container}>
             <Form/>
@@ -13,4 +10,4 @@ const Main: React.FC<IMainProps> = () => {
     );
 };
 
-export {Main};
+export {Auth};
