@@ -69,21 +69,20 @@ const objectsArray: ObjectItem[] = [
 const Content: FC<ContentProps> = () => {
     return (
         <div className={classNames(styles.content, {}, ["container"])}>
-            {false && <>
-                <ContentHeader
-                    title={"чем кормить кота"}
-                    count={7230}/>
-                <div className={styles.cardContent}>
-                    {objectsArray.map(({id, description, count, title}) => (
-                            <Card
-                                key={id}
-                                title={title}
-                                description={description}
-                                count={count}
-                            />
-                        )
-                    )}
-                </div></> }
+            <ContentHeader
+                title={"чем кормить кота"}
+                count={7230}/>
+            <div className={styles.cardContent}>
+                {objectsArray.map(({id, description, count, title}) => (
+                        <Card
+                            key={id}
+                            title={title}
+                            description={description}
+                            count={count}
+                        />
+                    )
+                )}
+            </div>
         </div>
     );
 };
