@@ -1,0 +1,41 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+
+  .cardContent {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .descriptionContent{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+
+    .title {
+      color: #272727;
+      margin-bottom: 8px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      height: 32px;
+    }
+
+    .description {
+      color: rgba(23, 23, 25, 0.30);
+      font-weight: 400;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      height: 32px;
+    }
+
+    .count{
+      color: rgba(23, 23, 25, 0.30);
+      font-weight: 400;
+    }
+  }
+
+}
