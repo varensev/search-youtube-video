@@ -1,0 +1,23 @@
+.Search {
+  height: calc(100vh - 180px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 16px;
+  width: 702px;
+
+  @media (max-width: 666px) {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 8px;
+  }
+
+  p {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 52px;
+    margin-bottom: 40px;
+
+  }
+}
