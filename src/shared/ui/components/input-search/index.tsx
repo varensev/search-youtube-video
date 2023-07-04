@@ -1,3 +1,5 @@
-import {InputSearch} from "./ui/input-search"
+import {lazy} from "react";
 
-export {InputSearch}
+export const InputSearch = lazy(() =>
+    import('./ui/input-search').then((module) => ({ default: module.InputSearch }))
+);
