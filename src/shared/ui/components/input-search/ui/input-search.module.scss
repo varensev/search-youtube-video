@@ -70,8 +70,8 @@
 
   input {
     border: 1px solid rgba(23, 23, 25, 0.20);
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
     outline: none;
     height: 100%;
     width: 100%;
