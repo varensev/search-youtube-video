@@ -1,7 +1,8 @@
 import {FC} from 'react';
 import styles from "./search.module.scss"
 import {classNames} from "../../../shared/lib/class-names";
-import {InputSearch} from "../../../shared/ui/components/input-search/input-search";
+import {InputSearch} from "../../../shared/ui/components/input-search";
+
 interface SearchProps {
 
 }
