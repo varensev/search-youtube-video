@@ -1,19 +1,11 @@
-import {FC} from 'react';
-import styles from "./search.module.scss"
-import {classNames} from "../../../shared/lib/class-names";
 import {InputSearch} from "../../../shared/ui/components/input-search";
 
-interface SearchProps {
-
-}
-
-const Search: FC<SearchProps> = () => {
+const Search = () => {
     return (
-        <div className={classNames(styles.Search,{} , ["container"])}>
-            <p>Поиск видео</p>
-            <InputSearch/>
-        </div>
+        <InputSearch/>
     );
 };
 
 export {Search};
+
+
