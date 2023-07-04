@@ -10,6 +10,9 @@
       width: 48px;
       height: 48px;
       margin-right: 45px;
+      @media (max-width: 420px) {
+        margin-right: 3px;
+      }
     }
 
     .links {
@@ -24,24 +27,16 @@
       line-height: var(--line-height);
       color: #1390E5;
 
+
       div {
         display: flex;
         gap: 44px;
+        @media (max-width: 420px) {
+          font-size: 14px;
+          gap: 13px;
+        }
       }
 
     }
   }
 }
-
-@media (max-width: 420px) {
-  .header .container .links {
-    font-size: 14px;
-    gap: 13px;
-  }
-
-  .header .container .logo {
-    margin-right: 3px;
-  }
-}
-
-
