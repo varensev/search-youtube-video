@@ -1,0 +1,36 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="#E5E5E5"/>
+<g id="Search result / Grid" clip-path="url(#clip0_4_89)">
+<rect width="1440" height="800" transform="translate(-1177 -264)" fill="#FAFAFA"/>
+<g id="Body">
+<g id="container" clip-path="url(#clip1_4_89)">
+<g id="Filter panel" clip-path="url(#clip2_4_89)">
+<g id="view-switcher" clip-path="url(#clip3_4_89)">
+<g id="list" opacity="0.3">
+<path id="Vector" d="M8 6H21" stroke="#272727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M8 12H21" stroke="#272727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M8 18H21" stroke="#272727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M3 6H3.01" stroke="#272727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M3 12H3.01" stroke="#272727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M3 18H3.01" stroke="#272727" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_4_89">
+<rect width="1440" height="800" fill="white" transform="translate(-1177 -264)"/>
+</clipPath>
+<clipPath id="clip1_4_89">
+<rect width="1040" height="720" fill="white" transform="translate(-977 -184)"/>
+</clipPath>
+<clipPath id="clip2_4_89">
+<rect width="1040" height="24" fill="white" transform="translate(-977)"/>
+</clipPath>
+<clipPath id="clip3_4_89">
+<rect width="63" height="24" fill="white"/>
+</clipPath>
+</defs>
+</svg>
