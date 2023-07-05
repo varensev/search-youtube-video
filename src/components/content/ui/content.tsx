@@ -3,6 +3,7 @@ import {classNames} from "../../../shared/lib/class-names";
 import styles from "./content.module.scss"
 import {ContentHeader} from "../../../shared/ui/components/content-header/content-header";
 import {Card} from "../../../shared/ui/components/content-card";
+import {useLayoutToggle} from "../../../hooks/use-layout-toggle";
 
 interface ContentProps {
 
@@ -16,8 +17,8 @@ type ObjectItem = {
 };
 const objectsArray: ObjectItem[] = [
     {
-        title: "Как кормить кошку натуралкой | Перечень полезных для кош...  Как кормить кошку натуралкой | Перечень полезных для кош...Как кормить кошку натуралкой | Перечень полезных для кош...Как кормить кошку натуралкой | Перечень полезных для кош...Как кормить кошку натуралкой | Перечень полезных для кош...",
-        description: "Ветеринария и Кормление соб... Ветеринария и Кормление соб...Ветеринария и Кормление соб...Ветеринария и Кормление соб...",
+        title: "Как кормить кошку натуралкой | Перечень полезных Как кормить кошку натуралкой | Перечень поКак кормить кошку натуралкой | Перечень поКак кормить кошку натуралкой | Перечень поКак кормить кошку натуралкой | Перечень подля кош...  Как кормить кошку натуралкой | Перечень полезных для кош...Как кормить кошку натуралкой | Перечень полезных для кош...Как кормить кошку натуралкой | Перечень полезных для кош...Как кормить кошку натуралкой | Перечень полезных для кош...",
+        description: "Ветеринария и Кормление соб... Ветеринария и Ветеринария и Кормление соб... Ветеринария и Ветеринария и Кормление соб... Ветеринария и Ветеринария и Кормление соб... Ветеринария и Ветеринария и Кормление соб... Ветеринария и Кормление соб...Ветеринария и Кормление соб...Ветеринария и Кормление соб...",
         count: 786,
         id: 1,
     },
@@ -67,18 +68,26 @@ const objectsArray: ObjectItem[] = [
 
 
 const Content: FC<ContentProps> = () => {
+    const {toggleGrid, toggleFlex, layoutMode} = useLayoutToggle()
+    const  layoutVue = layoutMode === "grid" ? styles.cardContent : ""
+
     return (
         <div className={classNames(styles.content, {}, ["container"])}>
             <ContentHeader
                 title={"чем кормить кота"}
-                count={7230}/>
-            <div className={styles.cardContent}>
+                count={7230}
+                toggleGrid={toggleGrid}
+                toggleFlex={toggleFlex}
+                layoutMode={layoutMode}
+            />
+            <div className={layoutVue}>
                 {objectsArray.map(({id, description, count, title}) => (
                         <Card
                             key={id}
                             title={title}
                             description={description}
                             count={count}
+                            layoutMode={layoutMode}
                         />
                     )
                 )}
