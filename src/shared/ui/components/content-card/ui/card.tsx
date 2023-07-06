@@ -1,7 +1,7 @@
 import {FC} from 'react';
 import CardHover from "../../../../assets/icons/hover-card.svg"
 import styles from "./card.module.scss"
-import {classNames} from "../../../../lib/class-names";
+import {getLayoutStyles} from "../../../../helpers/get-layout-styles";
 
 interface CardProps {
     title: string;
@@ -10,12 +10,24 @@ interface CardProps {
     layoutMode: "flex" | "grid";
 }
 
-const Card: FC<CardProps> = ({title, description, count, layoutMode}) => {
-    //TODO: refactor
-    const layoutVue =  layoutMode === "grid" ? styles.cardFlexColumn : classNames(styles.cardFlexRow, {} , [styles.cardContentFlexRow ])
-    const descriptionWidth = layoutMode === "grid" ? "" : styles.descriptionContentWidth
-    const descriptionContent = layoutMode === "grid" ? styles.descriptionContent : classNames(styles.descriptionContent, {} , [styles.descriptionContentFlexRow ])
+const {
+    cardFlexColumn,
+    cardFlexRow,
+    cardContentFlexRow,
+    descriptionContent,
+    descriptionContentFlexRow
+} = styles;
 
+const STYLE = {
+    cardFlexColumn,
+    cardFlexRow,
+    cardContentFlexRow,
+    descriptionContent,
+    descriptionContentFlexRow
+};
+
+const Card: FC<CardProps> = ({title, description, count, layoutMode}) => {
+    const { layoutVue, descriptionContent } = getLayoutStyles(layoutMode, STYLE);
 
     return (
         <div className={layoutVue}>
