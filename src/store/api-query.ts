@@ -16,4 +16,4 @@ export const youtubeApi = createApi({
 })
 
 
-export const {useGetMoviesByNameQuery} = youtubeApi
+export const { useGetMoviesByNameQuery} = youtubeApi
