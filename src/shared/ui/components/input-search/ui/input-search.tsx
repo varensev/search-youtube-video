@@ -6,6 +6,7 @@ import {classNames} from "../../../../lib/class-names";
 import React, {useState} from "react";
 import heart from "../../../../assets/icons/heart.svg"
 import {Outlet} from "react-router-dom";
+import {useGetMoviesByNameQuery} from "../../../../../store/api-query";
 
 const InputSearch = () => {
     const [vueTopForm, setVueTopForm] = useState<boolean>(false)
@@ -16,9 +17,10 @@ const InputSearch = () => {
     } = useForm<SchemaType>({
         resolver: yupResolver(schema),
     });
-
-    const onSubmit = (data: SchemaType) => {
-        console.log(data);
+    const { data, error, isLoading } = useGetMoviesByNameQuery('strada')
+    const onSubmit = (formData: SchemaType) => {
+        console.log(formData);
+        console.log(data)
         setVueTopForm(true)
     };
 

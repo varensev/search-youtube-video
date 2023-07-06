@@ -4,7 +4,10 @@ import logoImage from '../../../shared/assets/icons/sibdev-logo.svg';
 import {classNames} from "../../../shared/lib/class-names";
 import {APP_ROUTER} from "../../../providers/router/config/app-routes.constants";
 
+
 const Header = () => {
+
+
     return (
         <header className={styles.header}>
             <div className={classNames(styles.container, {}, ["container"])}>
