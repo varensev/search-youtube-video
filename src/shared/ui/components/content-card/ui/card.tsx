@@ -11,6 +11,7 @@ interface CardProps {
 }
 
 const Card: FC<CardProps> = ({title, description, count, layoutMode}) => {
+    //TODO: refactor
     const layoutVue =  layoutMode === "grid" ? styles.cardFlexColumn : classNames(styles.cardFlexRow, {} , [styles.cardContentFlexRow ])
     const descriptionWidth = layoutMode === "grid" ? "" : styles.descriptionContentWidth
     const descriptionContent = layoutMode === "grid" ? styles.descriptionContent : classNames(styles.descriptionContent, {} , [styles.descriptionContentFlexRow ])
