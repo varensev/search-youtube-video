@@ -8,11 +8,11 @@ const Header = () => {
     return (
         <header className={styles.header}>
             <div className={classNames(styles.container, {}, ["container"])}>
-                <img src={logoImage} alt="Логотип" className={styles.logo}/>
+                <Link to={APP_ROUTER.ROOT} ><img src={logoImage} alt="Логотип" className={styles.logo}/></Link>
                 <nav className={styles.links}>
                     <div>
-                        <Link to="/">Поиск</Link>
-                        <Link to="/">Избранное</Link>
+                        <Link to={APP_ROUTER.search}>Поиск</Link>
+                        <Link to={APP_ROUTER.favorites}>Избранное</Link>
                     </div>
                     <Link to={APP_ROUTER.LOGIN}>Выйти</Link>
                 </nav>

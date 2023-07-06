@@ -4,6 +4,7 @@ import {AppRouter} from "./providers/router/ui/app-router";
 import Loader from "./widget/loader/loader";
 
 
+
 function App() {
     return (
         <div>

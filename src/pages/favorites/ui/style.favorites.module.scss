@@ -1,0 +1,23 @@
+.contentFavorites {
+  background: #FFF;
+  border-radius: 20px;
+
+  p {
+    padding: 14px 20px;
+    border-bottom: 1px solid #F1F1F1;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  p:last-child {
+    border-bottom: none;
+  }
+}
+
+.favorites {
+  h2 {
+    padding: 40px 0;
+  }
+}

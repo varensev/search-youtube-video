@@ -3,8 +3,9 @@ import {yupResolver} from '@hookform/resolvers/yup';
 import {schema, SchemaType} from '../input-seacrh-schema/input-seacrh-schema'; // Путь к вашей схеме Yup
 import styles from './input-search.module.scss';
 import {classNames} from "../../../../lib/class-names";
-import {useState} from "react";
+import React, {useState} from "react";
 import heart from "../../../../assets/icons/heart.svg"
+import {Outlet} from "react-router-dom";
 
 const InputSearch = () => {
     const [vueTopForm, setVueTopForm] = useState<boolean>(false)
@@ -42,6 +43,9 @@ const InputSearch = () => {
             {errors.searchText && (
                 <span className={"error"}>{errors.searchText.message}</span>
             )}
+
+            <Outlet />
+
         </div>
     );
 };
