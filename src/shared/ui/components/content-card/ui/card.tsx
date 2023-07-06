@@ -11,15 +11,17 @@ interface CardProps {
 }
 
 const Card: FC<CardProps> = ({title, description, count, layoutMode}) => {
-    const layoutVue =  layoutMode === "grid" ? styles.cardFlexColumn : styles.cardFlexRow
+    const layoutVue =  layoutMode === "grid" ? styles.cardFlexColumn : classNames(styles.cardFlexRow, {} , [styles.cardContentFlexRow ])
     const descriptionWidth = layoutMode === "grid" ? "" : styles.descriptionContentWidth
+    const descriptionContent = layoutMode === "grid" ? styles.descriptionContent : classNames(styles.descriptionContent, {} , [styles.descriptionContentFlexRow ])
+
 
     return (
         <div className={layoutVue}>
             <div className={styles.cardContent}>
                 <img src={CardHover} alt="card"/>
             </div>
-            <div className={classNames(styles.descriptionContent, {} , [descriptionWidth])}>
+            <div className={descriptionContent}>
                 <p className={styles.title}>{description}</p>
                 <p className={styles.description}>{title}</p>
                 <p className={styles.count}>{count} тыс. просмотров</p>
