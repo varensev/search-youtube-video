@@ -1,6 +1,7 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
 import {Root} from "./youtube-types";
-import {apiKey} from "../../api_key";
+import {apiKey} from "./api_key";
+
 const apiUrl = 'https://www.googleapis.com/youtube/v3/search';
 
 export const youtubeApi = createApi({

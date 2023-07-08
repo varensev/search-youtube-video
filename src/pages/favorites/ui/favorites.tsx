@@ -1,11 +1,7 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {ContentFavorites} from "./content-favorites";
 import styles from "./style.favorites.module.scss"
 import {classNames} from "../../../shared/lib/class-names";
-
-interface FavoritesProps {
-
-}
 
 const title = [{
     title: "dasdasd",
@@ -16,7 +12,7 @@ const title = [{
         key: 2
     }]
 
-const Favorites: FC<FavoritesProps> = () => {
+const Favorites = () => {
     return (
         <div className={classNames(styles.favorites, {}, ["container"])}>
             <h2>Избранное</h2>

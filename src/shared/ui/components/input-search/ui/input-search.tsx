@@ -1,36 +1,35 @@
 import {useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
-import {schema, SchemaType} from '../input-seacrh-schema/input-seacrh-schema'; // Путь к вашей схеме Yup
+import {schema, SchemaType} from '../input-seacrh-schema/input-seacrh-schema';
 import styles from './input-search.module.scss';
 import {classNames} from "../../../../lib/class-names";
 import React, {useState} from "react";
 import heart from "../../../../assets/icons/heart.svg"
-import {Outlet} from "react-router-dom";
-import {useGetMoviesByNameQuery} from "../../../../../store/api-query";
-
-const InputSearch = () => {
+interface InputSearchProps {
+    setSearchItem: (value: string) => void
+    searchItem: string
+}
+const InputSearch: React.FC<InputSearchProps> = ({setSearchItem, searchItem}) => {
     const [vueTopForm, setVueTopForm] = useState<boolean>(false)
     const {
         handleSubmit,
-        register,
-        formState: {errors},
+        register,getValues,
+        formState: {errors },
     } = useForm<SchemaType>({
         resolver: yupResolver(schema),
     });
-    const { data, error, isLoading } = useGetMoviesByNameQuery('strada')
     const onSubmit = (formData: SchemaType) => {
         console.log(formData);
-        console.log(data)
+        setSearchItem(formData.searchText)
         setVueTopForm(true)
     };
 
-    const styleFormPosition = vueTopForm ? styles.SearchTop : styles.SearchCentre
+    const styleFormPosition = getValues() ? styles.SearchTop : styles.SearchCentre
 
     return (
         <div className={classNames(styleFormPosition, {}, ["container"])}>
             <p>Поиск видео</p>
             <form className={styles.containerInput} onSubmit={handleSubmit(onSubmit)}>
-
                 <div className={styles.inputContainer}>
                     <input
                         type="text"
@@ -45,9 +44,6 @@ const InputSearch = () => {
             {errors.searchText && (
                 <span className={"error"}>{errors.searchText.message}</span>
             )}
-
-            <Outlet />
-
         </div>
     );
 };

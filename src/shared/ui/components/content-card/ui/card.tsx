@@ -8,6 +8,7 @@ interface CardProps {
     description: string;
     count: number;
     layoutMode: "flex" | "grid";
+    url: any;
 }
 
 const {
@@ -26,13 +27,13 @@ const STYLE = {
     descriptionContentFlexRow
 };
 
-const Card: FC<CardProps> = ({title, description, count, layoutMode}) => {
+const Card: FC<CardProps> = ({title, description, count, layoutMode, url}) => {
     const { layoutVue, descriptionContent } = getLayoutStyles(layoutMode, STYLE);
-
+//CardHover
     return (
         <div className={layoutVue}>
             <div className={styles.cardContent}>
-                <img src={CardHover} alt="card"/>
+                <img src={url} alt="card"/>
             </div>
             <div className={descriptionContent}>
                 <p className={styles.title}>{description}</p>
