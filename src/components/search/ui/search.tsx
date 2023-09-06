@@ -7,6 +7,9 @@ const Search = () => {
     const [searchItem, setSearchItem] = useState("");
     const {data, error, isLoading} = useGetMoviesByNameQuery(searchItem)
 
+
+
+
     return (
         <>
             <InputSearch setSearchItem={setSearchItem} searchItem={searchItem}/>
