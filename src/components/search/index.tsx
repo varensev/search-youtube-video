@@ -1,3 +1,1 @@
-import {Search} from "./ui/search"
-
-export {Search}
+export *  from "./ui/search"
