@@ -18,7 +18,7 @@ const Form = () => {
     });
     const navigate = useNavigate();
 
-    const onSubmit = (data: validationSchemaType) => {
+    const onSubmit = (data: validationSchemaType): void => {
         console.log(data);
         navigate(APP_ROUTER.ROOT)
     };

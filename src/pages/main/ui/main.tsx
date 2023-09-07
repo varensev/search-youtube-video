@@ -1,14 +1,11 @@
-import {Header} from "../../../components/header";
-import {Outlet} from "react-router-dom";
+import { Outlet } from 'react-router-dom';
+import { Header } from '../../../components/header';
 
-const Main = () => {
-
+export const Main = () => {
     return (
-        <div>
-            <Header/>
+        <>
+            <Header />
             <Outlet />
-        </div>
+        </>
     );
 };
-
-export {Main};

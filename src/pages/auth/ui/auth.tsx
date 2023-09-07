@@ -1,13 +1,11 @@
 import React from 'react';
-import {Form} from "../../../components/form/form";
-import styles from "./auth.module.scss"
+import { Form } from '../../../components/form/form';
+import styles from './auth.module.scss';
 
-const Auth = () => {
+export const Auth = () => {
     return (
         <div className={styles.container}>
-            <Form/>
+            <Form />
         </div>
     );
 };
-
-export {Auth};
