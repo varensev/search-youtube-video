@@ -27,7 +27,7 @@ export const router = createBrowserRouter([
     {
         path: APP_ROUTER.LOGIN,
         element: <Auth/>,
-    },
+    }
 ]);
 
 

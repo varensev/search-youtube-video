@@ -3,12 +3,10 @@ import {Content} from "../../content";
 import {useGetMoviesByNameQuery} from "../../../store/api-query";
 import {useState} from "react";
 
+// TODO: добавить isLoading , error
 const Search = () => {
     const [searchItem, setSearchItem] = useState("");
     const {data, error, isLoading} = useGetMoviesByNameQuery(searchItem)
-
-
-
 
     return (
         <>

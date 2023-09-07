@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
+
+$font: 'Open Sans', sans-serif;
+$bg: #fff;
+$white: #fff;
+$text_color: #4B4F4B;
+$button: #FF5659;
+$hover: #FF2629;
+$selection: transparent;
+
+
+.wrapper {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+
+  .oops {
+    color: $text_color;
+    font-size: 8em;
+    letter-spacing: 0.05em;
+    padding-bottom: 70px;
+    @media (max-width: 900px) {
+      font-size: 5em;
+    }
+  }
+
+
+  .info {
+    color: $text_color;
+    padding: 5px;
+  }
+
+  .button {
+    background: $button;
+    color: $white;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-radius: 50px;
+    transition: 150ms;
+    margin: 0 auto;
+
+    &:hover {
+      background: $hover;
+      transition: 150ms;
+
+      .fa-angle-left {
+        animation: test 700ms ease-out;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes test {
+        to {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .fa-angle-left {
+      font-size: 1.2em;
+      margin-right: 15px;
+    }
+  }
+
+
+}
+
+
+
+
