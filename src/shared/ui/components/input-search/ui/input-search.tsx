@@ -7,9 +7,8 @@ import React, {useState} from "react";
 import heart from "../../../../assets/icons/heart.svg"
 interface InputSearchProps {
     setSearchItem: (value: string) => void
-    searchItem: string
 }
-const InputSearch: React.FC<InputSearchProps> = ({setSearchItem, searchItem}) => {
+const InputSearch: React.FC<InputSearchProps> = ({setSearchItem}) => {
     const [vueTopForm, setVueTopForm] = useState<boolean>(false)
     const {
         handleSubmit,
