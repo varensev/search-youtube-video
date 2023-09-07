@@ -13,6 +13,8 @@ export const youtubeApi = createApi({
         getMoviesByName: builder.query<Root, string>({
             query: (name) => `?part=snippet&key=${apiKey}&q=${encodeURIComponent(name)}`,
         }),
+
+
     }),
 })
 
