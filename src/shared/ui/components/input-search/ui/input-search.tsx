@@ -6,8 +6,14 @@ import styles from './input-search.module.scss';
 import { classNames } from '../../../../lib/class-names';
 import heart from '../../../../assets/icons/heart.svg';
 
+interface SearchItem {
+    value: string;
+    include: boolean;
+}
+
+
 interface InputSearchProps {
-    setSearchItem: (value: string) => void;
+    setSearchItem: React.Dispatch<React.SetStateAction<SearchItem>>;
 }
 
 const InputSearch: React.FC<InputSearchProps> = ({ setSearchItem }) => {
@@ -20,8 +26,7 @@ const InputSearch: React.FC<InputSearchProps> = ({ setSearchItem }) => {
         resolver: yupResolver(schema),
     });
     const onSubmit = (formData: SchemaType) => {
-        console.log(formData);
-        setSearchItem(formData.searchText);
+        setSearchItem({value : formData.searchText , include: true});
         setVueTopForm(true);
     };
 

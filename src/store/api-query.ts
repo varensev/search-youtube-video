@@ -3,7 +3,7 @@ import { Root } from './youtube-types';
 
 const apiUrl = 'https://www.googleapis.com/youtube/v3';
 const apikey = import.meta.env.VITE_REACT_APP_API_KEY
-
+const maxResults = 100;
 export const youtubeApi = createApi({
     reducerPath: 'youtubeApi',
     baseQuery: fetchBaseQuery({ baseUrl: apiUrl }),
@@ -15,10 +15,10 @@ export const youtubeApi = createApi({
                 params: {
                     part: 'snippet',
                     key: apikey,
-                    q: encodeURIComponent(name),
+                    q: name,
+                    maxResults,
                 },
             }),
-            keepUnusedDataFor: 3000,
         }),
     }),
 });

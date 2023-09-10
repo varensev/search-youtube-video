@@ -5,41 +5,48 @@ import { ContentHeader } from '../../../shared/ui/components/content-header/cont
 import { Card } from '../../../shared/ui/components/content-card';
 import { useLayoutToggle } from '../../../hooks/use-layout-toggle';
 import { useGetMoviesByNameQuery } from '../../../store/api-query';
+import { Grid } from '@mantine/core';
+
 interface ContentProps {
-    searchItem: string;
+    searchItem: {value: string};
 }
 
 const Content: FC<ContentProps> = ({ searchItem }) => {
     const { toggleGrid, toggleFlex, layoutMode } = useLayoutToggle();
-    const { data, error, isLoading } = useGetMoviesByNameQuery(searchItem);
+    const { data, error, isLoading } = useGetMoviesByNameQuery(searchItem.value);
     const layoutVue = layoutMode === 'grid' ? styles.cardContent : '';
-    console.log(data);
+    console.log(layoutVue, "layoutVue");
+
     if (!data) {
         return null;
     }
     return (
         <div className={classNames(styles.content, {}, ['container'])}>
-            {isLoading && <div>Loading...</div>}
+
             <ContentHeader
-                title={searchItem}
+                title={searchItem.value}
                 count={data.items?.length ?? 100}
                 toggleGrid={toggleGrid}
                 toggleFlex={toggleFlex}
                 layoutMode={layoutMode}
             />
-            <div className={layoutVue}>
+            {/*<div className={layoutVue}>*/}
+
+            {isLoading && <div>Loading...</div>}
+            <Grid>
                 {data.items?.map(({ id, snippet }) => (
-                        <Card
-                            key={id.videoId}
+                        <Grid.Col span={3} key={id.videoId}>
+                            <Card
                             title={snippet.title}
                             description={snippet.description}
-                            count={200}
                             url={snippet.thumbnails.high.url}
                             layoutMode={layoutMode}
                         />
+                        </Grid.Col>
                     ),
                 )}
-            </div>
+            </Grid>
+            {/*</div>*/}
 
         </div>
     );
